@@ -1,0 +1,46 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - innerclass",
+            "request": "launch",
+            "mainClass": "innerclass",
+            "projectName": "code_903ed15c"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - threadexample",
+            "request": "launch",
+            "mainClass": "threadexample",
+            "projectName": "code_903ed15c"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - fileexample1",
+            "request": "launch",
+            "mainClass": "fileexample1",
+            "projectName": "code_903ed15c"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - oa",
+            "request": "launch",
+            "mainClass": "oa",
+            "projectName": "code_903ed15c"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - basic2",
+            "request": "launch",
+            "mainClass": "basic2",
+            "projectName": "code_903ed15c"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - basic",
+            "request": "launch",
+            "mainClass": "basic",
+            "projectName": "code_903ed15c"
+        }
+    ]
+}
