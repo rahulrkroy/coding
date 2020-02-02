@@ -95,6 +95,17 @@ class LinkedList:
                 val=tmp.get_data()
                 print(val)
                 tmp=tmp.get_next()
+    
+    def rev(self):
+        self.reverse(self.__head)
+
+    def reverse(self,temp):
+        if (temp.get_next()==None or temp==None):
+            print(temp.get_data())
+            return temp
+        else:
+            self.reverse(temp.get_next())
+            print(temp.get_data())
 
     def __str__(self):
         temp=self.__head
@@ -107,6 +118,7 @@ class LinkedList:
         return msg
 
 
+
 list1=LinkedList()
 list1.insert_at_beg("Sugar")
 list1.insert_at_end("tea")
@@ -116,6 +128,8 @@ list1.insert_at_beg("chicken")
 list1.insert_at_end("biscuit")
 list1.insert_at_pos(2,"chanachur")
 list1.remove_at_pos(2)
+list1.rev()
 # list1.remove_at_end()
 # list1.remove_at_beg()
+
 list1.display()
