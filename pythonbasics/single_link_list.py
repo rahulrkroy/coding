@@ -15,7 +15,7 @@ class Node:
     def set_next(self,next_node):
         self.__next=next_node
 
-
+ 
 class LinkedList:
     def __init__(self):
         self.__head=None
@@ -55,6 +55,19 @@ class LinkedList:
         new_node.set_next(temp.get_next())
         temp.set_next(new_node)
 
+    def insert_after_element(self,data,data_before):
+        temp=self.find_node(data_before)
+        new_node=Node(data)
+        if(temp==None):
+            new_node.set_next(self.__head.get_next())
+            self.__head=new_node
+            if(self.__tail==None):
+                self.__tail=new_node
+        else:
+            new_node.set_next(temp.get_next())
+            temp.set_next(new_node)
+
+
     def remove_at_end(self):
         temp=self.__head
         if(self.__head==None):
@@ -84,6 +97,16 @@ class LinkedList:
         temp.set_next(temp.get_next().get_next())
         print(val,' is deleted. Bye')
         
+    def find_node(self,data):
+        temp=self.__head
+        while temp is not None:
+            val=temp.get_data()
+            if(val==data):
+                return temp
+                break
+            temp=temp.get_next()
+        return None
+
 
     def display(self):
         print("Elements of list are:- ")
@@ -117,6 +140,18 @@ class LinkedList:
         msg="Linkedlist data(Head to Tail): "+ msg
         return msg
 
+def remove_duplicates(duplicate_list):
+    temp = duplicate_list.get_head()
+    while(temp.get_next()):
+        if temp.get_data() == temp.get_next().get_data():
+            temp1=temp
+            temp=temp.get_next()
+            # print("Removed: "+str(temp1.get_data()))
+            duplicate_list.delete(temp1.get_data())
+            continue
+        temp=temp.get_next()
+    duplicate_list.display()
+    return duplicate_list
 
 
 list1=LinkedList()
@@ -128,8 +163,9 @@ list1.insert_at_beg("chicken")
 list1.insert_at_end("biscuit")
 list1.insert_at_pos(2,"chanachur")
 list1.remove_at_pos(2)
-list1.rev()
+list1.insert_after_element("susu","chicken")
+# list1.rev()
 # list1.remove_at_end()
 # list1.remove_at_beg()
-
+remove_duplicates(list1)
 list1.display()

@@ -1,0 +1,8 @@
+watch date
+watch -n 1 date
+
+bash livedate
+
+ctrl + c to terminate
+
+jobs

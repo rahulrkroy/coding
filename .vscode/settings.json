@@ -3,5 +3,17 @@
         "cmath": "cpp",
         "ostream": "cpp",
         "iostream": "cpp"
-    }
+    },
+    "sqltools.connections": [
+        {
+            "database": "dummy",
+            "dialect": "MySQL",
+            "name": "connection1",
+            "password": "password",
+            "port": 3306,
+            "server": "localhost",
+            "username": "root"
+        }
+    ],
+    "python.pythonPath": "/usr/bin/python3"
 }
