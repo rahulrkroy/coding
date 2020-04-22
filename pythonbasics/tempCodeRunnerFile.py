@@ -1,4 +1,3 @@
-astack.push(1)
-# astack.push(2)
-# astack.push(3)
-# astack.push(4)
+if(s1[0]==i):
+    #     s1+=i
+    # l.append(s1)
